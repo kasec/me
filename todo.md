@@ -9,6 +9,7 @@
 - Add assets when bundling to production.
 - Add tailwind and take sc to compare.
 - Add purge css and terser to minimize css and js and compare with other pictures.
+- [TODO] When the proccess in bundle its finished delete all html from source.
 
 # UI TODO
 - [DONE] Move to TailwindCSS
