@@ -1,0 +1,1 @@
+import{_ as o,a as n,r as t,o as s,c as a,d as r,F as e,f as p}from"./TopBar.2d4298f9.js";import c from"./bienvenidos.af59706e.js";const f={components:{Content:c,Footer:o,TopBar:n}};f.render=function(o,n,p,c,f,i){const m=t("top-bar"),u=t("Content"),d=t("Footer");return s(),a(e,null,[r(m),r("section",null,[r(u)]),r(d)],64)},p(f).mount("#app");
