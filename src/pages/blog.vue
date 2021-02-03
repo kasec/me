@@ -15,11 +15,11 @@
                     <p class="main-text -title">Latest Updates</p>
                 </div>
                 <ul class="post-list">
-                    <li class="post-item" v-for="item in [1, 2, 3, 4, 5]">
-                        <a>
+                    <li class="post-item" v-for="post in posts">
+                        <a :href="post.url">
                             <article>
-                                <p class="main-text -subtitle">How to Create a link.</p> 
-                                <p class="main-text">I'm a <span class="-strong">Web Developer</span>  and blogger from <span class="-strong">Durango, Mexico.</span></p> 
+                                <p class="main-text -subtitle">{{ post.name }}</p> 
+                                <p class="main-text">{{ post.description }}</p> 
                             </article>
                         </a>
                     </li>
@@ -29,24 +29,34 @@
     </section>
     <Footer/>
 </template>
-<script>
+<script setup>
 import Footer from 'components/Footer.vue'
 import TopBar from 'components/TopBar.vue'
 
-export default {
-    components: { Footer, TopBar },
-    data() {
-        return {
-            categories: [
-                "React", "Vue", "Vanilla JS"
-            ]
-        }
-    }
-}
+const modules = import.meta.glob('../content/**/*.md')
+
+const posts = Object.entries(modules).map(([path, module]) => {
+    console.log({ path });
+    const [firstLetter, ...allLetters ] = path.replace(/.*content\//, "").replace(/.md/, "").split("")
+    
+    const url = '/blog/' + [firstLetter, ...allLetters].join("") + '.html'
+    
+    const name = [firstLetter.toUpperCase(), ...allLetters].join("")
+    
+    return { name, url, description: "Bienvenido a este blog" }
+})
+
+const categories = [
+    "React", "Vue", "Vanilla JS"
+]
+
 </script>
 <style lang="postcss" scoped>
 section {
     @apply overflow-auto
+}
+section > .posts-container {
+    @apply m-5
 }
 section > .posts-container > .segment-posts {
     @apply  flex flex-col items-center min-w-full

@@ -10,6 +10,8 @@
 - Add tailwind and take sc to compare.
 - Add purge css and terser to minimize css and js and compare with other pictures.
 - [TODO] When the proccess in bundle its finished delete all html from source.
+- [TODO] Check it out https://github.com/hannoeru/vite-plugin-pages
+- [TODO] Check it out https://github.com/antfu/vite-ssg
 
 # UI TODO
 - [DONE] Move to TailwindCSS

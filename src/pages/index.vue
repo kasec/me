@@ -7,10 +7,12 @@
                 <a class="button" href="blog.html">See all</a>
             </div>
             <ul class="post-list">
-                <li class="post-item" v-for="item in [1,2,3,4, 5]">
+                <li class="post-item" v-for="post in posts">
                     <article>
-                        <p class="main-text -subtitle">How to Create a link.</p> 
-                        <p class="main-text">I'm a <span class="-strong">Web Developer</span>  and blogger from <span class="-strong">Durango, Mexico.</span></p> 
+                        <a :href="post.url">
+                                <p class="main-text -subtitle">{{ post.name }}</p> 
+                                <p class="main-text">{{ post.description }}</p> 
+                        </a>
                     </article>
                 </li>
             </ul>
@@ -22,11 +24,33 @@
 import Footer from 'components/Footer.vue'
 import TopBar from 'components/TopBar.vue'
 
+const modules = import.meta.glob('../content/**/*.md')
+
+const posts = Object.entries(modules).map(([path, module]) => {
+    console.log({ path });
+    const [firstLetter, ...allLetters ] = path.replace(/.*content\//, "").replace(/.md/, "").split("")
+    
+    const url = '/blog/' + [firstLetter, ...allLetters].join("") + '.html'
+    
+    const name = [firstLetter.toUpperCase(), ...allLetters].join("")
+    
+    return { name, url, description: "Bienvenido a este blog" }
+})
+
+const categories = [
+    "React", "Vue", "Vanilla JS"
+]
+
 export default {
     components: { Footer, TopBar },
+    setup() {
+        return {
+            posts
+        }
+    }
 }
 </script>
-<style lang="postcss" scoped>
+<style lang="postcss">
 section {
     @apply pt-10 overflow-auto
 }

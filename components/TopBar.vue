@@ -4,10 +4,10 @@
             <img class="logo-image" src="/assets/images/logo/logo.svg" alt="home">
         </a>
         <div class="button-stack">
-            <a class="link-button" href="projects.html">Projects</a> 
-            <a class="link-button" href="blog.html">Blog</a>
+            <a class="link-button" href="/projects.html">Projects</a> 
+            <a class="link-button" href="/blog.html">Blog</a>
             <a class="link-button">News</a>
-            <a class="link-button " href="about-me.html">About Me</a>
+            <a class="link-button " href="/about-me.html">About Me</a>
         </div>
     </nav>
 </template>
