@@ -9,10 +9,10 @@
             <ul class="post-list">
                 <li class="post-item" v-for="post in posts">
                     <article>
-                        <a :href="post.url">
+                        <router-link :to="post.url">
                                 <p class="main-text -subtitle">{{ post.name }}</p> 
                                 <p class="main-text">{{ post.description }}</p> 
-                        </a>
+                        </router-link>
                     </article>
                 </li>
             </ul>
@@ -30,7 +30,7 @@ const modules = import.meta.glob('../content/**/*.md')
 const posts = Object.entries(modules).map(([path, module]) => {
     const [firstLetter, ...allLetters ] = path.replace(/.*content\//, "").replace(/.md/, "").split("")
     
-    const url = '/blog/' + [firstLetter, ...allLetters].join("") + '.html'
+    const url = '/blog/' + [firstLetter, ...allLetters].join("")
     
     const name = [firstLetter.toUpperCase(), ...allLetters].join("")
     

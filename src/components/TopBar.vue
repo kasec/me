@@ -1,13 +1,13 @@
 <template>
     <nav>
-        <a class="home-button" href="/">
+        <router-link class="home-button" to="/">
             <img class="logo-image" src="/assets/images/logo/logo.svg" alt="home">
-        </a>
+        </router-link>
         <div class="button-stack">
-            <a class="link-button" href="/projects.html">Projects</a> 
-            <a class="link-button" href="/blog.html">Blog</a>
-            <a class="link-button">News</a>
-            <a class="link-button " href="/about-me.html">About Me</a>
+            <router-link class="link-button" to="/projects">Projects</router-link> 
+            <router-link class="link-button" to="/blog">Blog</router-link>
+            <!-- <router-link class="link-button">News</router-link> -->
+            <router-link class="link-button " to="/about-me">About Me</router-link>
         </div>
     </nav>
 </template>

@@ -16,12 +16,12 @@
                 </div>
                 <ul class="post-list">
                     <li class="post-item" v-for="post in posts">
-                        <a :href="post.url">
+                        <router-link :to="post.url">
                             <article>
                                 <p class="main-text -subtitle">{{ post.name }}</p> 
                                 <p class="main-text">{{ post.description }}</p> 
                             </article>
-                        </a>
+                        </router-link>
                     </li>
                 </ul>
             </div>
@@ -39,7 +39,7 @@ const posts = Object.entries(modules).map(([path, module]) => {
     console.log({ path });
     const [firstLetter, ...allLetters ] = path.replace(/.*content\//, "").replace(/.md/, "").split("")
     
-    const url = '/blog/' + [firstLetter, ...allLetters].join("") + '.html'
+    const url = '/blog/' + [firstLetter, ...allLetters].join("")
     
     const name = [firstLetter.toUpperCase(), ...allLetters].join("")
     
