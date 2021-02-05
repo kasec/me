@@ -61,6 +61,11 @@
     reduce-css-calc "^2.1.6"
     resolve "^1.19.0"
 
+"@types/node@^14.14.24":
+  version "14.14.25"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.25.tgz#15967a7b577ff81383f9b888aa6705d43fbbae93"
+  integrity sha512-EPpXLOVqDvisVxtlbvzfyqSsFeQxltFbluZNRndIb8tr9KiBnYNLzrc1N3pyKUCww2RNrfHDViqDWWE1LCJQtQ==
+
 "@vitejs/plugin-vue@^1.0.4":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-1.0.4.tgz#124b06b185a8b536210bdb00948c17e52ab589fe"
@@ -585,6 +590,16 @@ fs-extra@^9.0.1:
     graceful-fs "^4.2.0"
     jsonfile "^6.0.1"
     universalify "^1.0.0"
+
+fs-extra@^9.1.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-9.1.0.tgz#5954460c764a8da2094ba3554bf839e6b9a7c86d"
+  integrity sha512-hcg3ZmepS30/7BSFqRvoo3DOMQu7IjqxO5nCDt+zM9XWjb33Wg7ziNT+Qvqbuc3+gWpzO02JubVyk2G4Zvo1OQ==
+  dependencies:
+    at-least-node "^1.0.0"
+    graceful-fs "^4.2.0"
+    jsonfile "^6.0.1"
+    universalify "^2.0.0"
 
 fs.realpath@^1.0.0:
   version "1.0.0"
@@ -1399,10 +1414,10 @@ vite-plugin-md@^0.4.2:
     gray-matter "^4.0.2"
     markdown-it "^12.0.4"
 
-vite@^2.0.0-beta.36:
-  version "2.0.0-beta.62"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-2.0.0-beta.62.tgz#3227fc63ecd3d6fc67b1b95add68cdcde09844b2"
-  integrity sha512-75RF5H/8Ta2UvTSjiK5EslyTkUTgRMgkeVRDHqlfDNAJUI8+gvXzhEdTpq2bsASjvnlSytBk+odtCxikEoibbg==
+vite@^2.0.0-beta.64:
+  version "2.0.0-beta.64"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-2.0.0-beta.64.tgz#245cabc72335911d4cb704545f713d47e880d84f"
+  integrity sha512-/dR5rOXohhdXfkAIBAjmwX7JmoMWhQc7+VI6/EjyqXQCQzREmfBztLgTk/rPkmsNY87Cd71u9b+nlbcYK4TDCA==
   dependencies:
     esbuild "^0.8.34"
     postcss "^8.2.1"
@@ -1410,6 +1425,11 @@ vite@^2.0.0-beta.36:
     rollup "^2.35.1"
   optionalDependencies:
     fsevents "~2.1.2"
+
+vue-router@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.0.3.tgz#8b26050c88b2dec7e27a88835f71046b365823ec"
+  integrity sha512-AD1OjtVPyQHTSpoRsEGfPpxRQwhAhxcacOYO3zJ3KNkYP/r09mileSp6kdMQKhZWP2cFsPR3E2M3PZguSN5/ww==
 
 vue@^3.0.5:
   version "3.0.5"

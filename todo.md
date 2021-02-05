@@ -12,7 +12,15 @@
 - [TODO] When the proccess in bundle its finished delete all html from source.
 - [TODO] Check it out https://github.com/hannoeru/vite-plugin-pages
 - [TODO] Check it out https://github.com/antfu/vite-ssg
+- [TODO] Check it out how [prerender](https://github.com/vitejs/vite/blob/main/packages/playground/ssr-vue/prerender.js) works and whats the difference between it and wich one works better.
+- [TODO] Try ssr rendering about vite-ssr-example to watch which one works better.
 
+- [OVERVIEW] Create a screenshoot about this configuration and create a tag, after that, add prerender configuration and check wich one works better, also try with ssr example (vite-ssr-example)
+    - Also check how it works with vue router examples and watch if performance does not fall down too much. Maybe it could be the first blog post.
+    `Benchmark`:
+    1. Currently (its something like a multi spa) configuration.
+    2. Prerender with vue router.
+    3. SSR vite-ssr-example. build plugin add with prerender and serve html plugin too. 
 # UI TODO
 - [DONE] Move to TailwindCSS
 - [DONE] Media query when device size remove my name and just be with the buttons.

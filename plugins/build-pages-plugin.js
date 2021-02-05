@@ -1,6 +1,7 @@
-import { parse } from 'path'
-import fs from 'fs'
+import { parse, resolve } from 'path'
+import fs from 'fs-extra'
 import matched from 'matched'
+import vite from 'vite'
 
 const document = `
 <html lang="en">
@@ -25,52 +26,50 @@ const document = `
     </script> -->
 </head>
 <body>
-	<div id="app"></div>
-	<!-- script-outlet -->
+	<div id="app"><!--html-placeholder--></div>
+	<!--js-placeholder-->
 </body>
 </html>
 `
 const script = (path) => `
 <script type="module">
-	import { createApp } from 'vue'
-	import "/index.css"
+	import { createSSRApp } from 'vue'
+	import "/css/index.css"
 	import App from "${path}"
-	createApp(App).mount('#app')
+
+	createSSRApp(App).mount('#app')
 </script>
 `
 
 export const buildPagesPlugin = () => {
 	return {
         name: "build-pages-plugin",
-        apply: 'build',
+		apply: 'build',
 		options(opts) {
-            console.log({ opts });
 			let inputOptions = {}
 			const pattern = ["src/pages/**/*.vue"]
 
-			const staticPaths = matched.sync('**/**.html', { realpath: true })
+			const staticPaths = matched.sync(['**/**.html', "!dist/**/**.html"], { realpath: true })
 
 			staticPaths.forEach(staticFile => {
 				fs.rmSync(staticFile)
 			})
-
-            console.log({rootDir: __dirname});
 
 			const files = matched.sync(pattern, { realpath: true })
 
 			files.forEach(filePath => {
 				const pathObject = parse(filePath)
 
-				const dirname = pathObject.dir.replace(/.*\/src\/pages(\/*)/, "") // get the parent dir if it is not a pages and if it does not exist I have to create
+				const dirname = pathObject.dir.replace(/.*(\/*)src\/pages(\/*)/, "") // get the parent dir if it is not a pages and if it does not exist I have to create
 
-				if(dirname && !! fs.existsSync(dirname) === false) fs.mkdirSync(dirname)
-				
-				const  newFile = dirname ?  dirname + '/' + pathObject.name + '.html' : pathObject.name + '.html'  
+				if(dirname && !! fs.existsSync(dirname) === false) fs.ensureDirSync(dirname);
+
+				const newFile = dirname ?  dirname + '/' + pathObject.name + '.html' : pathObject.name + '.html'  
 
 				inputOptions = { ...inputOptions, [pathObject.name]: newFile }
 
 				const writeStream = fs.createWriteStream(newFile)
-				writeStream.write(document.replace(/<!-- script-outlet -->/, script(filePath.replace(/.*\/src/, "/src"))))
+				writeStream.write(document.replace(/<!--js-placeholder-->/, script(filePath.replace(/.*\/src/, "/src"))))
 				writeStream.end()
 			});
 
@@ -78,8 +77,37 @@ export const buildPagesPlugin = () => {
 				...opts,
 				input: inputOptions
 			}
-            console.log({ newOptions });
+
 			return newOptions
 		},
+		async transformIndexHtml(html, { path }) {
+
+			const fileName = path.replace(/.html$/, '.vue').replace(/^\//, "")
+
+			console.log({ fileName });
+
+			const filePath = resolve(__dirname, "src/pages", fileName)
+
+			console.log({ filePath });
+
+			const server = await vite.createServer()
+
+			const { serverRendering } = await server.ssrLoadModule('vite-setup/serverRendering.ts')
+
+			const htmlString = await serverRendering(filePath)
+			console.log({ html });
+			const htmlFinal = html
+				.replace(/<!--html-placeholder-->/, htmlString)
+				// .replace(/<!--js-placeholder-->/, script(filePath))
+			
+			return htmlFinal
+		},
+		closeBundle() {
+			const staticPaths = matched.sync(['**/**.html', "!dist/**/**.html"], { realpath: true })
+
+			staticPaths.forEach(staticFile => {
+				fs.rmSync(staticFile)
+			})
+		}
 	}
 }

@@ -23,11 +23,11 @@
 <script>
 import Footer from 'components/Footer.vue'
 import TopBar from 'components/TopBar.vue'
+import { ref } from 'vue'
 
 const modules = import.meta.glob('../content/**/*.md')
 
 const posts = Object.entries(modules).map(([path, module]) => {
-    console.log({ path });
     const [firstLetter, ...allLetters ] = path.replace(/.*content\//, "").replace(/.md/, "").split("")
     
     const url = '/blog/' + [firstLetter, ...allLetters].join("") + '.html'
@@ -49,6 +49,7 @@ export default {
         }
     }
 }
+const count = ref(0)
 </script>
 <style lang="postcss">
 section {

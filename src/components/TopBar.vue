@@ -12,6 +12,7 @@
     </nav>
 </template>
 <script>
+import '../../css/index.css'
 export default {
     setup(props) {
         console.log({ props });   

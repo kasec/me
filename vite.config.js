@@ -1,6 +1,6 @@
 import vuePlugin from '@vitejs/plugin-vue'
 import Markdown from 'vite-plugin-md'
-import { serveHtml } from './plugins/serve-html-plugin'
+import serveHtml from './plugins/serve-html-plugin'
 import { buildPagesPlugin } from './plugins/build-pages-plugin'
 import emoji from 'markdown-it-emoji'
 import { resolve } from 'path'
@@ -9,15 +9,8 @@ export default (args) => {
 	console.log({ args });
 	return {
 		alias: {
-			components: resolve(__dirname, 'components'),
-			pages: resolve(__dirname, 'pages'),
+			components: resolve(__dirname, 'src/components'),
 			content: resolve(__dirname, 'src/content')
-		},
-		build: {
-			rollupOptions: {
-				// input: ['src/pages/**.vue'],
-				output: "dist"
-			},
 		},
 		plugins: [
 			vuePlugin({
