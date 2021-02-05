@@ -1,1 +1,1 @@
-# Vite-SSG Reproduction
+# Vite-SSG plugin Reproduction
