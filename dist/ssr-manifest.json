@@ -1,94 +1,94 @@
 {
   "/home/galfan/Documents/web-dev/me/node_modules/@vue/shared/dist/shared.esm-bundler.js": [
-    "/assets/vendor.221782d8.js"
+    "/assets/vendor.ab4ea872.js"
   ],
   "/home/galfan/Documents/web-dev/me/node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js": [
-    "/assets/vendor.221782d8.js"
+    "/assets/vendor.ab4ea872.js"
   ],
   "/home/galfan/Documents/web-dev/me/node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js": [
-    "/assets/vendor.221782d8.js"
+    "/assets/vendor.ab4ea872.js"
   ],
   "/home/galfan/Documents/web-dev/me/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js": [
-    "/assets/vendor.221782d8.js"
+    "/assets/vendor.ab4ea872.js"
   ],
   "/home/galfan/Documents/web-dev/me/node_modules/vue/dist/vue.runtime.esm-bundler.js": [
-    "/assets/vendor.221782d8.js"
+    "/assets/vendor.ab4ea872.js"
   ],
   "/home/galfan/Documents/web-dev/me/node_modules/vite-ssg/dist/chunk.46RN3I3Z.mjs": [
-    "/assets/vendor.221782d8.js"
+    "/assets/vendor.ab4ea872.js"
   ],
   "/home/galfan/Documents/web-dev/me/node_modules/vue-router/dist/vue-router.esm-bundler.js": [
-    "/assets/vendor.221782d8.js"
+    "/assets/vendor.ab4ea872.js"
   ],
   "/home/galfan/Documents/web-dev/me/node_modules/@vueuse/head/dist/index.mjs": [
-    "/assets/vendor.221782d8.js"
+    "/assets/vendor.ab4ea872.js"
   ],
   "/home/galfan/Documents/web-dev/me/node_modules/vite-ssg/dist/index.mjs": [
-    "/assets/vendor.221782d8.js"
+    "/assets/vendor.ab4ea872.js"
   ],
   "/home/galfan/Documents/web-dev/me/src/pages/about-me.vue?vue&type=style&index=0&scoped=true&lang.postcss": [
-    "/assets/about-me.943fa3e7.js",
-    "/assets/about-me.6b0588b2.css"
+    "/assets/about-me.db0730db.js",
+    "/assets/about-me.a1f41867.css"
   ],
   "/home/galfan/Documents/web-dev/me/src/pages/about-me.vue": [
-    "/assets/about-me.943fa3e7.js",
-    "/assets/about-me.6b0588b2.css"
+    "/assets/about-me.db0730db.js",
+    "/assets/about-me.a1f41867.css"
   ],
   "/home/galfan/Documents/web-dev/me/src/pages/blog.vue?vue&type=style&index=0&lang.postcss": [
-    "/assets/blog.d1f69c6f.js",
+    "/assets/blog.e579b7c5.js",
     "/assets/blog.13466ab6.css"
   ],
   "/home/galfan/Documents/web-dev/me/src/pages/blog.vue": [
-    "/assets/blog.d1f69c6f.js",
+    "/assets/blog.e579b7c5.js",
     "/assets/blog.13466ab6.css"
   ],
   "/home/galfan/Documents/web-dev/me/src/pages/blog/index.vue": [
-    "/assets/index.33780ea9.js"
+    "/assets/index.d5eb2845.js"
   ],
   "/home/galfan/Documents/web-dev/me/src/pages/blog/spanish/bienvenidos.md": [
-    "/assets/bienvenidos.31cbe38c.js"
+    "/assets/bienvenidos.8d29a676.js"
   ],
   "/home/galfan/Documents/web-dev/me/src/pages/blog/spanish/react/como-funciona-react.md": [
-    "/assets/como-funciona-react.57c7d0cd.js"
+    "/assets/como-funciona-react.47bdaff3.js"
   ],
   "/home/galfan/Documents/web-dev/me/assets/images/pics/projects/vaul-gif.gif": [
-    "/assets/projects.4044fd41.js",
-    "/assets/projects.eec7e7f9.css"
+    "/assets/projects.70ae4ff3.js",
+    "/assets/projects.61c72d53.css"
   ],
   "/home/galfan/Documents/web-dev/me/assets/images/pics/projects/igfe-gif.gif": [
-    "/assets/projects.4044fd41.js",
-    "/assets/projects.eec7e7f9.css"
+    "/assets/projects.70ae4ff3.js",
+    "/assets/projects.61c72d53.css"
   ],
   "/home/galfan/Documents/web-dev/me/assets/images/pics/projects/payment-gif.gif": [
-    "/assets/projects.4044fd41.js",
-    "/assets/projects.eec7e7f9.css"
+    "/assets/projects.70ae4ff3.js",
+    "/assets/projects.61c72d53.css"
   ],
   "/home/galfan/Documents/web-dev/me/assets/images/pics/projects/auth.gif": [
-    "/assets/projects.4044fd41.js",
-    "/assets/projects.eec7e7f9.css"
+    "/assets/projects.70ae4ff3.js",
+    "/assets/projects.61c72d53.css"
   ],
   "/home/galfan/Documents/web-dev/me/assets/images/pics/projects/mini-crm.gif": [
-    "/assets/projects.4044fd41.js",
-    "/assets/projects.eec7e7f9.css"
+    "/assets/projects.70ae4ff3.js",
+    "/assets/projects.61c72d53.css"
   ],
   "/home/galfan/Documents/web-dev/me/assets/images/pics/projects/cruz-proto.gif": [
-    "/assets/projects.4044fd41.js",
-    "/assets/projects.eec7e7f9.css"
+    "/assets/projects.70ae4ff3.js",
+    "/assets/projects.61c72d53.css"
   ],
   "/home/galfan/Documents/web-dev/me/assets/images/pics/projects/somos-tribu.gif": [
-    "/assets/projects.4044fd41.js",
-    "/assets/projects.eec7e7f9.css"
+    "/assets/projects.70ae4ff3.js",
+    "/assets/projects.61c72d53.css"
   ],
   "/home/galfan/Documents/web-dev/me/assets/images/pics/projects/kitten-store.gif": [
-    "/assets/projects.4044fd41.js",
-    "/assets/projects.eec7e7f9.css"
+    "/assets/projects.70ae4ff3.js",
+    "/assets/projects.61c72d53.css"
   ],
   "/home/galfan/Documents/web-dev/me/src/pages/projects.vue?vue&type=style&index=0&scoped=true&lang.postcss": [
-    "/assets/projects.4044fd41.js",
-    "/assets/projects.eec7e7f9.css"
+    "/assets/projects.70ae4ff3.js",
+    "/assets/projects.61c72d53.css"
   ],
   "/home/galfan/Documents/web-dev/me/src/pages/projects.vue": [
-    "/assets/projects.4044fd41.js",
-    "/assets/projects.eec7e7f9.css"
+    "/assets/projects.70ae4ff3.js",
+    "/assets/projects.61c72d53.css"
   ]
 }
