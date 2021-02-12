@@ -1,5 +1,5 @@
 <template>
-    <TopBar/>
+    <!-- <TopBar/> -->
     <main>
         <div class="menu-bar">
             <p class="font-semibold place-self-center">Categories</p>

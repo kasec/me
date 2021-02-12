@@ -1,5 +1,5 @@
 <template>
-    <top-bar/>
+    <!-- <TopBar/> -->
     <section>
         <img class="lazy cover-image" loading="lazy" :src="img_src" alt="random picture">
         <div class="cover-text">

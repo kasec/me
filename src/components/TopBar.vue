@@ -1,16 +1,54 @@
 <template>
     <nav>
-        <router-link class="home-button" to="/">
+        <!-- <router-link class="home-button" to="/"> -->
+        <a class="home-button" href="/">
             <img class="logo-image" src="/assets/images/logo/logo.svg" alt="home">
-        </router-link>
+        </a>
+        <!-- </router-link> -->
         <div class="button-stack">
-            <router-link class="link-button" to="/projects">Projects</router-link> 
-            <router-link class="link-button" to="/blog">Blog</router-link>
-            <!-- <router-link class="link-button">News</router-link> -->
-            <router-link class="link-button " to="/about-me">About Me</router-link>
+            <router-link v-for="button in router_buttons" :class="button.class" :to="button.to">{{button.title}}</router-link> 
         </div>
     </nav>
 </template>
+<script setup>
+import { ref, watch } from "vue";
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+
+let _window;
+
+try {
+    _window = window
+} catch(err) {
+    _window = {}
+}
+
+const createRouterButtons = (pathname) => [
+    {
+        to: '/projects',
+        title: 'Projects',
+        class: pathname.startsWith('/projects') ? "active-button" : "link-button"
+    },
+    {
+        to: '/blog',
+        title: 'Blog',
+        class: pathname.startsWith('/blog') ? "active-button" : "link-button"
+    },
+    {
+        to: '/about-me',
+        title: 'About Me',
+        class: pathname.startsWith('/about-me') ? "active-button" : "link-button"
+    },
+]
+const router_buttons = ref(createRouterButtons(_window?.location?.pathname || ''))
+
+watch(route, () => {
+    const newRouteButtons = createRouterButtons(_window?.location?.pathname || '')
+    router_buttons.value = newRouteButtons
+})
+
+</script>
 <style lang="postcss" scoped>
 nav {
     @apply flex flex-col sm:flex-row justify-between px-5 bg-green-700 rounded-b-lg
@@ -27,4 +65,9 @@ nav > .button-stack {
 nav > .button-stack > .link-button {
     @apply py-3 px-3 flex items-center justify-center hover:bg-black hover:text-white hover:bg-opacity-50
 }
+
+nav > .button-stack > .active-button {
+    @apply py-3 px-3 flex items-center justify-center hover:bg-black hover:text-white hover:bg-opacity-50 bg-black m-1
+}
+
 </style>

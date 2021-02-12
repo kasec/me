@@ -2,3 +2,6 @@
 /output
 /dist
 # need to uncomment to create commit in dist folder and after that upload to gh-pages branch.
+# git subtree push --prefix dist origin gh-pages
+# 244
+# 834

@@ -1,5 +1,5 @@
 <template>
-    <TopBar/>
+    <!-- <TopBar/> -->
     <section id="content">
         <div class="title-content">
             <p class="main-text -subtitle">I'm Web Developer, And below are what I've done ?</p>

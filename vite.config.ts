@@ -7,9 +7,11 @@ import { resolve } from 'path'
 import Prism from 'markdown-it-prism'
 
 export default {
-	alias: {
-		components: resolve(__dirname, 'src/components'),
-		content: resolve(__dirname, 'src/content')
+	resolve: {
+		alias: {
+			components: resolve(__dirname, 'src/components'),
+			content: resolve(__dirname, 'src/content')
+		},
 	},
 	plugins: [
 		vuePlugin({

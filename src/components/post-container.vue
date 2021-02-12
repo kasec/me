@@ -29,7 +29,6 @@
 const modules = import.meta.glob('/src/pages/blog/**/*.(vue|md)')
 
 const posts = Object.entries(modules).map(([path, module]) => {
-    console.log({ path });
     const cleanPath = path.replace(/.*blog\//, "").replace(/.(md|vue)/, "").replace(/^\.\//, "")
 
     const tags = (cleanPath.match(/.+?\//g) || []).map(tag => tag.replace(/^\//, "").replace(/\/$/, ""))

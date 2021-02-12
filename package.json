@@ -22,14 +22,14 @@
     "markdown-it-prism": "^2.1.4",
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
-    "vite": "^2.0.0-beta.67",
+    "vite": "^2.0.0-beta.69",
     "vite-plugin-components": "^0.6.6",
     "vite-plugin-md": "^0.4.2",
     "vite-plugin-pages": "^0.3.0",
-    "vite-ssg": "^0.8.3",
-    "vue": "^3.0.5"
+    "vite-ssg": "^0.8.6"
   },
   "dependencies": {
+    "vue": "^3.0.5",
     "prism-theme-vars": "^0.1.4",
     "vue-router": "^4.0.3"
   }

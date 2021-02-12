@@ -1,5 +1,5 @@
 <template>
-    <TopBar/>
+    <!-- <TopBar/> -->
     <section>
         <post-container></post-container>
     </section>
