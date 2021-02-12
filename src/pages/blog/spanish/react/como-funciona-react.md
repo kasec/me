@@ -1,3 +1,9 @@
+---
+title: como funciona react por detras, aqui te lo explicamos.
+meta:
+  - name: description
+    content: En este blog hablare sobre como funciona React, asi algunos trucos para "salvar" performance, por que renderean todos los elementos?, como evitarlo, asi como algunas cosas de useMemo y useCallback (memoization)
+---
 # Como funciona exactamente React
 
 ## Como hace **React** para renderear sus componentes asi como tambien como utilizar `useCallback` y `useMemo`

@@ -125,13 +125,20 @@
     </section>
     <Footer/>
 </template>
-<script>
-import Footer from 'components/Footer.vue'
-import TopBar from 'components/TopBar.vue'
+<script setup>
+import { useHead } from '@vueuse/head'
 
-export default {
-    components: { Footer, TopBar },
-}
+useHead({
+    // Can be static or computed
+    title: "Currently you are watching my projects",
+    meta: [
+        {
+            name: `description`,
+            content: "In this page are all my projects what I have built with differents techinlogies, check it out!",
+        },
+    ],
+})
+
 </script>
 <style lang="postcss" scoped>
 section#content {

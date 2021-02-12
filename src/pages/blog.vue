@@ -28,7 +28,7 @@ useHead({
     meta: [
         {
             name: `description`,
-            content: "Now you can see watch every thing what I posting about tech and web development",
+            content: "Now you can see watch every thing what I posting about tech and web development, here are listed all post what a published.",
         },
     ],
     script: [

@@ -11,13 +11,25 @@
     <Footer/>
 </template>
 <script>
-import Footer from 'components/Footer.vue'
-import TopBar from 'components/TopBar.vue'
+import { useHead } from '@vueuse/head'
+
 
 export default {
-    components: { Footer, TopBar },
     data() {
         return { img_src: '' }
+    },
+    setup() {
+        useHead({
+            // Can be static or computed
+            title: "If you don't know me, you can watch a little description about me below.",
+            meta: [
+                {
+                    name: `description`,
+                    content: "A little description about me, Gelacio Azael Fernandez Aldava its my full name and I'm a JS Fullstack web developer",
+                },
+            ],
+        })
+        
     },
     mounted() {
         const getImageNumber = (() => Math.ceil(Math.random() * 7))();

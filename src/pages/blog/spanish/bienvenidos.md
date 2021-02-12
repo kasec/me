@@ -1,3 +1,10 @@
+---
+title: Bienvenidos a mi primer post
+meta:
+  - name: description
+    content: En este momento estare escribiendo mis primeras palabras como blogger en una cuenta personal.
+---
+
 # Bienvenidos!
 
 Bienvenidos a, este mi primer blog. 8-)
