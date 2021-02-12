@@ -2,31 +2,35 @@
   "name": "me",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "serve": "vite serve --mode PRODUCTION ./dist"
+    "dev": "cross-env DEBUG=vite-ssg:* vite",
+    "build": "cross-env DEBUG=vite-ssg:* vite-ssg build",
+    "serve": "vite preview"
   },
   "devDependencies": {
-    "@rollup/plugin-virtual": "^2.0.3",
     "@tailwindcss/postcss7-compat": "^2.0.2",
+    "@types/markdown-it-emoji": "^2.0.0",
+    "@types/node": "^14.14.24",
     "@vitejs/plugin-vue": "^1.0.4",
     "@vue/compiler-sfc": "^3.0.5",
     "@vue/server-renderer": "^3.0.5",
     "autoprefixer": "^9",
-    "es-module-lexer": "^0.3.26",
-    "express": "^4.17.1",
+    "cross-env": "^7.0.3",
+    "fs-extra": "^9.1.0",
     "highlight": "^0.2.4",
-    "install": "^0.13.0",
-    "magic-string": "^0.25.7",
     "markdown-it-emoji": "^2.0.0",
     "markdown-it-highlightjs": "^3.4.0",
-    "matched": "^5.0.1",
-    "node-fetch": "^2.6.1",
+    "markdown-it-prism": "^2.1.4",
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
-    "vite": "^2.0.0-beta.62",
+    "vite": "^2.0.0-beta.67",
+    "vite-plugin-components": "^0.6.6",
     "vite-plugin-md": "^0.4.2",
+    "vite-plugin-pages": "^0.3.0",
+    "vite-ssg": "^0.8.3",
     "vue": "^3.0.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "prism-theme-vars": "^0.1.4",
+    "vue-router": "^4.0.3"
+  }
 }
