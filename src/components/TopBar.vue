@@ -11,14 +11,6 @@
         </div>
     </nav>
 </template>
-<script>
-import '../../css/index.css'
-export default {
-    setup(props) {
-        console.log({ props });   
-    }
-}
-</script>
 <style lang="postcss" scoped>
 nav {
     @apply flex flex-col sm:flex-row justify-between px-5 bg-green-700 rounded-b-lg

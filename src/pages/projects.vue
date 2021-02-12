@@ -6,14 +6,6 @@
             <p class="description">These are the main projects deployed.</p>
         </div>
         <div class="cards">
-            <!-- add vaul project and igfe-gif, with all tech requirements -->
-            <!-- JWT auth and cookie implementation -->
-            <!-- A different UI Framework -->
-            <!-- A different Build Tool, Parcel -->
-            <!-- A Server Side Rendering approach -->
-            <!-- A DDD Backend Principles -->
-            <!-- A Scalable and Maintanable Big web system -->
-            <!-- devops CI/CD Process docker containers -->
             <div class="card">
                 <div class="header">
                     <p class="title">Vaul Platform</p>

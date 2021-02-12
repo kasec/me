@@ -1,76 +1,127 @@
 <template>
     <TopBar/>
-    <section class="flex sm:flex-row flex-col sm:justify-center">
-        <div class="sticky left-0 top-0  px-4 py-2 bg-black shadow-2xl text-white rounded-sm flex flex-row sm:flex-col justify-between">
-            <p class="font-semibold inline-block place-self-center">Categories</p>
+    <main>
+        <div class="menu-bar">
+            <p class="font-semibold place-self-center">Categories</p>
             <ul class="flex flex-row sm:flex-col">
                 <li class="rounded-sm hover:bg-gray-500 py-2 px-3" v-for="item in categories">
                     <a href="">{{ item }}</a>
                 </li>
             </ul>
         </div>
-        <div class="posts-container">
-            <div class="segment-posts">
-                <div class="top">
-                    <p class="main-text -title">Latest Updates</p>
-                </div>
-                <ul class="post-list">
-                    <li class="post-item" v-for="post in posts">
-                        <router-link :to="post.url">
-                            <article>
-                                <p class="main-text -subtitle">{{ post.name }}</p> 
-                                <p class="main-text">{{ post.description }}</p> 
-                            </article>
-                        </router-link>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
+        <section>
+            <router-view></router-view>
+        </section>
+    </main>
     <Footer/>
 </template>
 <script setup>
-import Footer from 'components/Footer.vue'
-import TopBar from 'components/TopBar.vue'
-
-const modules = import.meta.glob('../content/**/*.md')
-
-const posts = Object.entries(modules).map(([path, module]) => {
-    console.log({ path });
-    const [firstLetter, ...allLetters ] = path.replace(/.*content\//, "").replace(/.md/, "").split("")
-    
-    const url = '/blog/' + [firstLetter, ...allLetters].join("")
-    
-    const name = [firstLetter.toUpperCase(), ...allLetters].join("")
-    
-    return { name, url, description: "Bienvenido a este blog" }
-})
+import { useHead } from '@vueuse/head'
 
 const categories = [
     "React", "Vue", "Vanilla JS"
 ]
 
+useHead({
+    // Can be static or computed
+    title: "Now you are watching my thoughts",
+    meta: [
+        {
+            name: `description`,
+            content: "Now you can see watch every thing what I posting about tech and web development",
+        },
+    ],
+    script: [
+        {
+            async: true,
+            src: 'https://platform.twitter.com/widgets.js',
+            charset: 'utf-8'
+        }
+    ]
+})
+
 </script>
-<style lang="postcss" scoped>
-section {
-    @apply overflow-auto
+<style lang="postcss">
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap');
+
+/* https://github.com/antfu/prism-theme-vars */
+@import 'prism-theme-vars/base.css';
+
+:root {
+  --prism-font-family: 'Input Mono', monospace;
 }
-section > .posts-container {
-    @apply m-5
+
+html:not(.dark) {
+    --prism-font-size: .9rem;
+    --prism-line-height: 1.3em;
+    --prism-foreground: #393a34;
+    --prism-background: #fbfbfb;
+    --prism-comment: #b8c4b8;
+    --prism-string: #c67b5d;
+    --prism-literal: #3a9c9b;
+    --prism-keyword: #248459;
+    --prism-function: #849145;
+    --prism-deleted: #a14f55;
+    --prism-class: #2b91af;
+    --prism-builtin: #a52727;
+    --prism-property: #ad502b;
+    --prism-namespace: #c96880;
+    --prism-punctuation: #8e8f8b;
+    --prism-decorator: #bd8f8f;
+    --prism-json-property: #698c96;
 }
-section > .posts-container > .segment-posts {
-    @apply  flex flex-col items-center min-w-full
+
+main {
+    @apply flex sm:flex-row flex-col justify-start h-5/6; font-family: 'Inter', sans-serif;
 }
-section > .posts-container > .segment-posts > .top {
-    @apply flex flex-row items-center space-x-8
+main > .menu-bar {
+    @apply sticky left-0 top-0  px-4 py-2 bg-black bg-opacity-90 shadow-2xl text-white rounded-sm flex flex-row sm:flex-col justify-between
 }
-section > .posts-container > .segment-posts > .top > .button {
-    @apply bg-black text-white font-semibold rounded-lg p-2 hover:bg-green-900 border-4 hover:border-white
+main > section {
+    @apply w-full
 }
-section > .posts-container > .segment-posts > .post-list > .post-item {
-    @apply p-3
+main > section > .markdown-body {
+    @apply max-w-screen-lg mx-auto px-10
 }
-section > .posts-container > .segment-posts > .post-list > .post-item > a > article {
-    @apply cursor-pointer border-t border-gray-400 p-4 hover:bg-white hover:shadow-lg hover:border-transparent
+
+main > section > .markdown-body > h1, h2, h3 {
+    font-family: 'Lato', 'Inter', sans-serif;
+}
+
+main > section > .markdown-body > blockquote {
+    @apply bg-gray-300 p-4 border-green-700 border-l-8 my-4 flex-shrink italic
+}
+
+main > section > .markdown-body > p {
+    @apply mb-4
+}
+
+main > section > .markdown-body a {
+    @apply border-gray-800 border-b hover:bg-gray-400 hover:bg-opacity-40
+}
+
+main > section > .markdown-body > pre {
+    @apply my-6
+}
+main > section > .markdown-body > ul {
+    @apply list-inside list-disc
+}
+main > section > .markdown-body > ol {
+    @apply list-inside list-decimal
+}
+:is(h1, h1, h3, p) code {
+    color: var(--prism-builtin);
+    font-style: italic;
+    @apply bg-gray-300 p-1 rounded-md font-medium
+}
+main > section > .markdown-body > h1 {
+    @apply font-extrabold text-4xl mb-6 mt-2
+}
+main > section > .markdown-body > h2 {
+    @apply font-extrabold text-2xl mb-5 mt-2
+}
+main > section > .markdown-body > h3 {
+    @apply font-bold text-2xl mb-5 mt-2
 }
 </style>

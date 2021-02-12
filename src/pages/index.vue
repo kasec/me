@@ -1,55 +1,24 @@
 <template>
     <TopBar/>
     <section>
-        <div class="posts-container">
-            <div class="top">
-                <p class="main-text -title">Latest Updates</p>
-                <a class="button" href="blog.html">See all</a>
-            </div>
-            <ul class="post-list">
-                <li class="post-item" v-for="post in posts">
-                    <article>
-                        <router-link :to="post.url">
-                                <p class="main-text -subtitle">{{ post.name }}</p> 
-                                <p class="main-text">{{ post.description }}</p> 
-                        </router-link>
-                    </article>
-                </li>
-            </ul>
-        </div>
+        <post-container></post-container>
     </section>
     <Footer/>
 </template>
-<script>
-import Footer from 'components/Footer.vue'
-import TopBar from 'components/TopBar.vue'
-import { ref } from 'vue'
+<script setup>
+import { useHead } from '@vueuse/head'
 
-const modules = import.meta.glob('../content/**/*.md')
+    useHead({
+        // Can be static or computed
+        title: "Welcome to Azael Landing",
+        meta: [
+            {
+                name: `description`,
+                content: "Now you can see watch every thing that I post about tech/ web development",
+            },
+        ],
+    })
 
-const posts = Object.entries(modules).map(([path, module]) => {
-    const [firstLetter, ...allLetters ] = path.replace(/.*content\//, "").replace(/.md/, "").split("")
-    
-    const url = '/blog/' + [firstLetter, ...allLetters].join("")
-    
-    const name = [firstLetter.toUpperCase(), ...allLetters].join("")
-    
-    return { name, url, description: "Bienvenido a este blog" }
-})
-
-const categories = [
-    "React", "Vue", "Vanilla JS"
-]
-
-export default {
-    components: { Footer, TopBar },
-    setup() {
-        return {
-            posts
-        }
-    }
-}
-const count = ref(0)
 </script>
 <style lang="postcss">
 section {
