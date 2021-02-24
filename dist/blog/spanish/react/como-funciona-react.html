@@ -4,6 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>como funciona react por detras, aqui te lo explicamos.</title>
+
+    <link rel="author" href="https://twitter.com/azaelfernandez" />
+    <!-- <meta name="keywords" content="{{keywords}}"> -->
+    <!-- <meta property="og:url" content="{{pageUrl}}">
+  <meta property="og:image" content="{{imageUrl}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:title" content="{{pageTitle}}">
+  <meta property="og:site_name" content="{{siteTitle}}">
+  <meta property="og:see_also" content="{{homepageUrl}}">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="{{pageUrl}}">
+  <meta name="twitter:title" content="{{pageTitle}}">
+  <meta name="twitter:description" content="{{description}}">
+  <meta name="twitter:image" content="{{imageUrl}}"> -->
+
     <link rel="icon" href="/assets/logo.1a8473b1.svg" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -11,26 +27,22 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&amp;display=swap"
       rel="stylesheet"
     />
-    <script async="" src="https://cdn.splitbee.io/sb.js"></script>
-    <script
-      data-ad-client="ca-pub-3566337185147445"
-      async=""
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-    ></script>
+    <!-- <script async src="https://cdn.splitbee.io/sb.js"></script>
+  <script data-ad-client="ca-pub-3566337185147445" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
     <script
       type="module"
       async=""
       crossorigin=""
-      src="/assets/app.5af2f8bc.js"
+      src="/assets/app.74dbe9e5.js"
     ></script>
-    <link rel="modulepreload" href="/assets/vendor.ab4ea872.js" />
-    <link rel="stylesheet" href="/assets/app.65aa4f91.css" />
-    <link rel="modulepreload" crossorigin="" href="/assets/blog.e579b7c5.js" />
-    <link rel="stylesheet" href="/assets/blog.13466ab6.css" />
+    <link rel="modulepreload" href="/assets/vendor.fb03be93.js" />
+    <link rel="stylesheet" href="/assets/app.31ce5e61.css" />
+    <link rel="modulepreload" crossorigin="" href="/assets/blog.4f0d4cfa.js" />
+    <link rel="stylesheet" href="/assets/blog.02a22ffd.css" />
     <link
       rel="modulepreload"
       crossorigin=""
-      href="/assets/como-funciona-react.47bdaff3.js"
+      href="/assets/como-funciona-react.63aa14f3.js"
     />
     <script
       async="true"
@@ -50,75 +62,55 @@
   <body data-head-attrs="">
     <div id="app" data-server-rendered="true">
       <!--[-->
-      <nav data-v-59900bb7="">
-        <!-- <router-link class="home-button" to="/"> --><a
-          class="home-button"
-          href="/"
-          data-v-59900bb7=""
+      <nav data-v-0c28eda4="">
+        <a class="home-button" href="/" data-v-0c28eda4=""
           ><img
             class="logo-image"
             src="/assets/logo.1a8473b1.svg"
             alt="home"
-            data-v-59900bb7="" /></a
-        ><!-- </router-link> -->
-        <div class="button-stack" data-v-59900bb7="">
-          <!--[--><a href="/projects" class="link-button" data-v-59900bb7=""
+            data-v-0c28eda4=""
+        /></a>
+        <div class="button-stack" data-v-0c28eda4="">
+          <!--[--><a href="/projects" class="link-button" data-v-0c28eda4=""
             >Projects</a
           ><a
             href="/blog"
             class="router-link-active link-button"
-            data-v-59900bb7=""
+            data-v-0c28eda4=""
             >Blog</a
-          ><a href="/about-me" class="link-button" data-v-59900bb7=""
+          ><a href="/about-me" class="link-button" data-v-0c28eda4=""
             >About Me</a
           ><!--]-->
         </div>
       </nav>
-      <!--[--><!-- <TopBar/> -->
       <main>
-        <div class="menu-bar">
-          <p class="font-semibold place-self-center">Categories</p>
-          <ul class="flex flex-row sm:flex-col">
-            <!--[-->
-            <li class="rounded-sm hover:bg-gray-500 py-2 px-3">
-              <a href="">React</a>
-            </li>
-            <li class="rounded-sm hover:bg-gray-500 py-2 px-3">
-              <a href="">Vue</a>
-            </li>
-            <li class="rounded-sm hover:bg-gray-500 py-2 px-3">
-              <a href="">Vanilla JS</a>
-            </li>
-            <!--]-->
-          </ul>
-        </div>
-        <section>
-          <div class="markdown-body">
-            <h1>Como funciona exactamente React</h1>
-            <h2>
-              Como hace <strong>React</strong> para renderear sus componentes
-              asi como tambien como utilizar <code>useCallback</code> y
-              <code>useMemo</code>
-            </h2>
-            <blockquote>
-              <p>
-                <strong>Para comprender este blog</strong>, doy por hecho ya que
-                tienes un conocimiento minimo sobre el api de React.
-              </p>
-            </blockquote>
-            <h2>Overview</h2>
+        <!---->
+        <div class="markdown-body">
+          <h1>Como funciona exactamente React</h1>
+          <h2>
+            Como hace <strong>React</strong> para renderear sus componentes asi
+            como tambien como utilizar <code>useCallback</code> y
+            <code>useMemo</code>
+          </h2>
+          <blockquote>
             <p>
-              Como <em>React</em> es aparemente muy rapido,
-              <em><strong>re-renderea</strong></em> los componentes hijos cada
-              vez que una accion en especifico es disparada.
+              <strong>Para comprender este blog</strong>, doy por hecho ya que
+              tienes un conocimiento minimo sobre el api de React.
             </p>
-            <p>
-              Enseguida mostrare unas piezas de codigo, no te preocupes si no
-              entiendes, tratare de explicarlo sobre la marcha.
-            </p>
-            <pre
-              class="language-jsx"
-            ><code class="language-jsx"><span class="token comment">// components/count-button.jsx</span>
+          </blockquote>
+          <h2>Overview</h2>
+          <p>
+            Como <em>React</em> es aparemente muy rapido,
+            <em><strong>re-renderea</strong></em> los componentes hijos cada vez
+            que una accion en especifico es disparada.
+          </p>
+          <p>
+            Enseguida mostrare unas piezas de codigo, no te preocupes si no
+            entiendes, tratare de explicarlo sobre la marcha.
+          </p>
+          <pre
+            class="language-jsx"
+          ><code class="language-jsx"><span class="token comment">// components/count-button.jsx</span>
 <span class="token keyword">const</span> <span class="token function-variable function">CountButton</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token function">CountButton</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>onClick<span class="token punctuation">,</span> count<span class="token punctuation">,</span> id<span class="token punctuation">}</span><span class="token operator">:</span> any</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Rendering [CountButton] with [id] ::"</span><span class="token punctuation">,</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	
@@ -137,10 +129,10 @@
   
 <span class="token punctuation">}</span>
 </code></pre>
-            <br />
-            <pre
-              class="language-jsx"
-            ><code class="language-jsx"><span class="token comment">// App.jsx</span>
+          <br />
+          <pre
+            class="language-jsx"
+          ><code class="language-jsx"><span class="token comment">// App.jsx</span>
 <span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Rendering [App]"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -177,23 +169,23 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 </code></pre>
-            <p>
-              Cuantos <strong>logs</strong> seran mostrados en tus
-              <em><code>devtools</code></em> cada vez que presiones un boton?
-            </p>
-            <h3>SPOILERS!!</h3>
-            <p>
-              Cada vez que presionas un boton el contador se actualiza, supongo
-              que esto es normal para ti, ademas de eso los componentes que no
-              tienen ninguna dependencia son alterados y vuelven a renderearse.
-            </p>
-            <p>
-              Ejemplo: Si das clic al button 1 los logs que se mostraran seran
-              los siguientes:
-            </p>
-            <pre
-              class="language-output"
-            ><code class="language-output">Rendering [App]
+          <p>
+            Cuantos <strong>logs</strong> seran mostrados en tus
+            <em><code>devtools</code></em> cada vez que presiones un boton?
+          </p>
+          <h3>SPOILERS!!</h3>
+          <p>
+            Cada vez que presionas un boton el contador se actualiza, supongo
+            que esto es normal para ti, ademas de eso los componentes que no
+            tienen ninguna dependencia son alterados y vuelven a renderearse.
+          </p>
+          <p>
+            Ejemplo: Si das clic al button 1 los logs que se mostraran seran los
+            siguientes:
+          </p>
+          <pre
+            class="language-output"
+          ><code class="language-output">Rendering [App]
 Rendering [CountButton] with [id] :: 1
 Rendering [CountButton] with [id] :: 2
 
@@ -202,61 +194,61 @@ Rendering [CountButton] with [id] :: 2
 
 [count] 1
 </code></pre>
-            <p>Despues de ver el output de arriba surgen varias preguntas.</p>
-            <p>
-              Como mencione arriba, React renderea todos los componentes hijos
-              sin importar que estos no tengan ninguna
-              <em><strong>dependencia/prop</strong></em> directa del padre, esto
-              no sabemos por que lo hace React pero debe de tener alguna razon.
-            </p>
-            <p>
-              Algunos autores mencionan que no hay ninguna razon para temerle a
-              esto ya que React es sumamente <em>rapido</em>, para que esto
-              cause algun problema.
-            </p>
-            <blockquote class="twitter-tweet">
-              <p lang="en" dir="ltr">
-                I rarely use these React performance features:<br /><br />React.memo<br />useCallback<br />useMemo<br /><br />If
-                I have a performance issue, I usually find I made a mistake or
-                am using a component that merely needs optimized.<a
-                  href="https://twitter.com/hashtag/react?src=hash&amp;ref_src=twsrc%5Etfw"
-                  >#react</a
-                >
-              </p>
-              — Cory House (@housecor)
-              <a
-                href="https://twitter.com/housecor/status/1358791451665178634?ref_src=twsrc%5Etfw"
-                >February 8, 2021</a
+          <p>Despues de ver el output de arriba surgen varias preguntas.</p>
+          <p>
+            Como mencione arriba, React renderea todos los componentes hijos sin
+            importar que estos no tengan ninguna
+            <em><strong>dependencia/prop</strong></em> directa del padre, esto
+            no sabemos por que lo hace React pero debe de tener alguna razon.
+          </p>
+          <p>
+            Algunos autores mencionan que no hay ninguna razon para temerle a
+            esto ya que React es sumamente <em>rapido</em>, para que esto cause
+            algun problema.
+          </p>
+          <blockquote class="twitter-tweet">
+            <p lang="en" dir="ltr">
+              I rarely use these React performance features:<br /><br />React.memo<br />useCallback<br />useMemo<br /><br />If
+              I have a performance issue, I usually find I made a mistake or am
+              using a component that merely needs optimized.<a
+                href="https://twitter.com/hashtag/react?src=hash&amp;ref_src=twsrc%5Etfw"
+                >#react</a
               >
-            </blockquote>
-            <blockquote>
-              <p>
-                Si gustas puedes leer el
-                <a href="https://kentcdodds.com/blog/usememo-and-usecallback"
-                  >post de Kent</a
-                >, para conocer mas del tema.
-              </p>
-            </blockquote>
-            <p>Quedan 2 preguntas por resolver.</p>
-            <ol>
-              <li>
-                Se puede evitar la renderizacion de elementos no dependientes?
-              </li>
-              <li>
-                Porque el <code>onClick</code> <em>prop</em> lo marca como que
-                esta cambiando el valor?
-              </li>
-            </ol>
-            <h2>
-              Se puede evitar la renderizacion de elementos no dependientes?
-            </h2>
-            <p>
-              La respuesta a esto es <strong>SI</strong>, si se puede, en
-              seguida muestro como. `
             </p>
-            <pre
-              class="language-jsx"
-            ><code class="language-jsx"><span class="token comment">// components/count-button.jsx</span>
+            — Cory House (@housecor)
+            <a
+              href="https://twitter.com/housecor/status/1358791451665178634?ref_src=twsrc%5Etfw"
+              >February 8, 2021</a
+            >
+          </blockquote>
+          <blockquote>
+            <p>
+              Si gustas puedes leer el
+              <a href="https://kentcdodds.com/blog/usememo-and-usecallback"
+                >post de Kent</a
+              >, para conocer mas del tema.
+            </p>
+          </blockquote>
+          <p>Quedan 2 preguntas por resolver.</p>
+          <ol>
+            <li>
+              Se puede evitar la renderizacion de elementos no dependientes?
+            </li>
+            <li>
+              Porque el <code>onClick</code> <em>prop</em> lo marca como que
+              esta cambiando el valor?
+            </li>
+          </ol>
+          <h2>
+            Se puede evitar la renderizacion de elementos no dependientes?
+          </h2>
+          <p>
+            La respuesta a esto es <strong>SI</strong>, si se puede, en seguida
+            muestro como. `
+          </p>
+          <pre
+            class="language-jsx"
+          ><code class="language-jsx"><span class="token comment">// components/count-button.jsx</span>
 <span class="token keyword">const</span> CountButton <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">memo</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">CountButton</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>onClick<span class="token punctuation">,</span> count<span class="token punctuation">,</span> id<span class="token punctuation">}</span><span class="token operator">:</span> any</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Rendering [CountButton] with [id] ::"</span><span class="token punctuation">,</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	
@@ -275,33 +267,31 @@ Rendering [CountButton] with [id] :: 2
   
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-            <p>Notas la diferencia en el codigo de arriba?</p>
-            <p>
-              <a href="https://reactjs.org/docs/react-api.html#reactmemo"
-                >React.memo</a
-              >, es un <em><strong>high order component</strong></em
-              >, el cual envuelve tu componente y
-              <a href="https://en.wikipedia.org/wiki/Memoization">memoriza</a>
-              tu componente lo cual permite que no este cambiando/rendereando
-              cada vez que el padre dispara un evento, sino solo si sus props
-              cambian.
-            </p>
-            <p>
-              Aunque con esto no es suficiente ya que el
-              <code>onClick</code> prop siempre esta cambiando, esto nos lleva a
-              la siguiente pregunta.
-            </p>
-            <h2>
-              Porque el <code>onClick</code> <em>prop</em> lo marca como que
-              esta cambiando el valor?
-            </h2>
-            <p>
-              La respuesta es simple, veamos el codigo de
-              <code>App.jsx</code> otra vez.
-            </p>
-            <pre
-              class="language-jsx"
-            ><code class="language-jsx"><span class="token comment">// App.jsx</span>
+          <p>Notas la diferencia en el codigo de arriba?</p>
+          <p>
+            <a href="https://reactjs.org/docs/react-api.html#reactmemo"
+              >React.memo</a
+            >, es un <em><strong>high order component</strong></em
+            >, el cual envuelve tu componente y
+            <a href="https://en.wikipedia.org/wiki/Memoization">memoriza</a> tu
+            componente lo cual permite que no este cambiando/rendereando cada
+            vez que el padre dispara un evento, sino solo si sus props cambian.
+          </p>
+          <p>
+            Aunque con esto no es suficiente ya que el <code>onClick</code> prop
+            siempre esta cambiando, esto nos lleva a la siguiente pregunta.
+          </p>
+          <h2>
+            Porque el <code>onClick</code> <em>prop</em> lo marca como que esta
+            cambiando el valor?
+          </h2>
+          <p>
+            La respuesta es simple, veamos el codigo de
+            <code>App.jsx</code> otra vez.
+          </p>
+          <pre
+            class="language-jsx"
+          ><code class="language-jsx"><span class="token comment">// App.jsx</span>
 <span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Rendering [App]"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -338,49 +328,48 @@ Rendering [CountButton] with [id] :: 2
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 </code></pre>
-            <p>
-              El detalle aqui es que a diferencia de los
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Glossary/Primitive"
-                >valores primitivos</a
-              >
-              las funciones son guardadas por referencia, y como sabemos cuando
-              un evento es disparado se renderean todos los componentes.
-            </p>
-            <p>
-              <code>increment1</code> y <code>increment2</code> al momento que
-              el componente padre vuelve a renderizarse obtienen otro valor,
-              aunque sea el mismo lo guardan en otra referencia, y dentro de los
-              componentes <code>CountButton</code>, obtienen el valor de dicha
-              (nueva)referencia y por el <code>useEffect</code> lo detecta como
-              nuevo.
-            </p>
-            <p>
-              Ahora que ya sabemos que es lo que causa la renderizacion aun
-              teniendo <code>React.memo</code> podemos tomar cartas en el asunto
-              para evitar el cambio del valor de <code>increment1</code> y
-              <code>increment2</code>
-            </p>
-            <p>
-              Lo que usaremos a continuacion para que no cambie el datos sera
-              memoization lo cual usamos arriba.
-            </p>
-            <p>
-              React tiene dos hooks que podemos utilizar aqui
-              <code>useMemo</code> y <code>useCallback</code>, en este caso
-              usaremos <code>useCallback</code>. Estos hooks los que hacen
-              principalmente es <em>memorizar</em> el valor y no lo cambian
-              siempre y cuando alguna dependencia como tal cambie, esto evita
-              que
-              <em
-                >computaciones complejas se esten ejecutando en cada
-                renderizacion</em
-              >. En este caso nosotros la utilizaremos para que nuestros
-              componentes hijos se rendericen cuando sea nesesario.
-            </p>
-            <pre
-              class="language-jsx"
-            ><code class="language-jsx"><span class="token comment">// App.jsx</span>
+          <p>
+            El detalle aqui es que a diferencia de los
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Glossary/Primitive"
+              >valores primitivos</a
+            >
+            las funciones son guardadas por referencia, y como sabemos cuando un
+            evento es disparado se renderean todos los componentes.
+          </p>
+          <p>
+            <code>increment1</code> y <code>increment2</code> al momento que el
+            componente padre vuelve a renderizarse obtienen otro valor, aunque
+            sea el mismo lo guardan en otra referencia, y dentro de los
+            componentes <code>CountButton</code>, obtienen el valor de dicha
+            (nueva)referencia y por el <code>useEffect</code> lo detecta como
+            nuevo.
+          </p>
+          <p>
+            Ahora que ya sabemos que es lo que causa la renderizacion aun
+            teniendo <code>React.memo</code> podemos tomar cartas en el asunto
+            para evitar el cambio del valor de <code>increment1</code> y
+            <code>increment2</code>
+          </p>
+          <p>
+            Lo que usaremos a continuacion para que no cambie el datos sera
+            memoization lo cual usamos arriba.
+          </p>
+          <p>
+            React tiene dos hooks que podemos utilizar aqui
+            <code>useMemo</code> y <code>useCallback</code>, en este caso
+            usaremos <code>useCallback</code>. Estos hooks los que hacen
+            principalmente es <em>memorizar</em> el valor y no lo cambian
+            siempre y cuando alguna dependencia como tal cambie, esto evita que
+            <em
+              >computaciones complejas se esten ejecutando en cada
+              renderizacion</em
+            >. En este caso nosotros la utilizaremos para que nuestros
+            componentes hijos se rendericen cuando sea nesesario.
+          </p>
+          <pre
+            class="language-jsx"
+          ><code class="language-jsx"><span class="token comment">// App.jsx</span>
 <span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 	<span class="token keyword">const</span> <span class="token punctuation">[</span>count1<span class="token punctuation">,</span> setCount1<span class="token punctuation">]</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token operator">...</span><span class="token punctuation">)</span>
 	<span class="token keyword">const</span> <span class="token punctuation">[</span>count2<span class="token punctuation">,</span> setCount2<span class="token punctuation">]</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token operator">...</span><span class="token punctuation">)</span>
@@ -405,45 +394,44 @@ Rendering [CountButton] with [id] :: 2
 	<span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 </code></pre>
-            <p>
-              Lo unico que hicimos arriba fue envolver nuestras funciones en el
-              hook de React, ahora cuando presiones un boton
-              <strong>1</strong> solo mostrara los siguientes logs:
-            </p>
-            <pre
-              class="language-output"
-            ><code class="language-output">Rendering [App]
+          <p>
+            Lo unico que hicimos arriba fue envolver nuestras funciones en el
+            hook de React, ahora cuando presiones un boton
+            <strong>1</strong> solo mostrara los siguientes logs:
+          </p>
+          <pre
+            class="language-output"
+          ><code class="language-output">Rendering [App]
 Rendering [CountButton] with [id] :: 1
 
 [count] 1
 </code></pre>
-            <h1>Resumen</h1>
-            <p>Que es lo que vimos?</p>
-            <ul>
-              <li>Como Funciona React.</li>
-              <li>
-                <a
-                  href="https://reactjs.org/docs/react-api.html#reactpurecomponent"
-                  >Como crear un component puro</a
-                >.
-              </li>
-              <li>Como funcionan las funciones en js.</li>
-              <li>Memoization.</li>
-              <li><code>useCallback</code> React Hook.</li>
-            </ul>
-            <h1>Bonus</h1>
-            <p>
-              Si llegaste hasta aqui, gracias por leer este post, espero y te
-              haya resultado de bastante ayuda.
-            </p>
-            <p>
-              Igual si tienes alguna observacion y/o duda puedes contactarme en
-              alguna de mis redes sociales, que estan abajo(solo dale clic/tap
-              al footer), me gustaria saber que piensas que y con gusto cuando
-              tenga tiempo te respondere.
-            </p>
-          </div>
-        </section>
+          <h1>Resumen</h1>
+          <p>Que es lo que vimos?</p>
+          <ul>
+            <li>Como Funciona React.</li>
+            <li>
+              <a
+                href="https://reactjs.org/docs/react-api.html#reactpurecomponent"
+                >Como crear un component puro</a
+              >.
+            </li>
+            <li>Como funcionan las funciones en js.</li>
+            <li>Memoization.</li>
+            <li><code>useCallback</code> React Hook.</li>
+          </ul>
+          <h1>Bonus</h1>
+          <p>
+            Si llegaste hasta aqui, gracias por leer este post, espero y te haya
+            resultado de bastante ayuda.
+          </p>
+          <p>
+            Igual si tienes alguna observacion y/o duda puedes contactarme en
+            alguna de mis redes sociales, que estan abajo(solo dale clic/tap al
+            footer), me gustaria saber que piensas que y con gusto cuando tenga
+            tiempo te respondere.
+          </p>
+        </div>
       </main>
       <footer title="Tap the footer to fold or unfold" data-v-dc8c0fae="">
         <input type="checkbox" id="expandable" data-v-dc8c0fae="" /><label
@@ -536,7 +524,7 @@ Rendering [CountButton] with [id] :: 1
           </p></label
         >
       </footer>
-      <!--]--><!--]-->
+      <!--]-->
     </div>
   </body>
 </html>
