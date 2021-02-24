@@ -14,6 +14,7 @@
 <script setup lang="ts">
 import { defineProps, ref } from 'vue'
 const props = defineProps<{ init?: number }>()
+
 const counter = ref(props.init || 0)
 </script>
 

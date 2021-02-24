@@ -78,7 +78,7 @@ Los stats de la version 2 no se terminaron.
 
 Version 2: Ya que como la pagina no se esta refrescando en cada redireccion, solo carga los scripts faltantes en este caso css y html, lo cual es una ventaja ya que en la version 1 carga todo otra vez.
 
-Nose exatamente como funcionan lo navegadores, ejemplo en version 1 que redirige y "carga" todos los archivos otra vez, nose si el navegador deberia de dejar en cache los datos que ya han sido utilizados, ejemplo en este caso las imagagenes del footer son las mismas en las 2 todas las vistas, no creo que deberian de ser cargadas una y otra vez. Abra que investigarlo. 
+Nose exatamente como funcionan lo navegadores, ejemplo en version 1 que redirige y "carga" todos los archivos otra vez, nose si el navegador deberia de dejar en cache los datos que ya han sido utilizados, ejemplo en este caso las imagenes del footer son las mismas en las 2 todas las vistas, no creo que deberian de ser cargadas una y otra vez. Abra que investigarlo. 
 
 Con los scripts es otro tema ya que la herramienta de bundleo tiene mucho que ver, ejemplo si utilizas una libreria de ui supongo que la libreria es bundleada dentro de un script en especifo. ejemplo en la vista main, tenemos un `main-kjdf213-asd.js`, este archivo tiene depencia a la libreira de ui pero esta esta bundleada dentro. al igual que  la vista de projects, tiene un script llamado  `projects-sdfd213-asd.js`, si tiene la misma dependencia deberia de estar bundleada adentro.
 
@@ -86,4 +86,6 @@ Mi pensamiento es el siguiente, si hay n-cantidad de vistas que tienen la misma 
 
 > El code splitting no elimina la nesecidad ya que lo uqe hace en particualr es cargar el script cuando es nesesario, solo que aqui deberia de ser agarrado del cache y no cuando sea nesesario en especifico.
 
-Abrai que investigar.
+## Overview
+
+Me di la tarea de ver como funcionaba el network de devtools del navegador, no habia percatado bien. En efecto el navegador cachea los archivos que encuentra repetitivos, asi que no nesesariamente importa si es html o lo renderea com script. en este caso si dependeria mas de la herramienta de bundleo que haga code splitting a los archivos que tengan la misma relacion sobre un archivo en especifico. 

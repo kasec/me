@@ -1,5 +1,4 @@
 <template>
-    <!-- <TopBar/> -->
     <section>
         <img class="lazy cover-image" loading="lazy" :src="img_src" alt="random picture">
         <div class="cover-text">
@@ -8,7 +7,6 @@
             <p class="main-text">I'm a <span class="-strong">Web Developer</span>  and blogger from <span class="-strong">Durango, Mexico.</span></p> 
         </div>
     </section>
-    <Footer/>
 </template>
 <script>
 import { useHead } from '@vueuse/head'

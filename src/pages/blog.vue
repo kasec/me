@@ -1,26 +1,11 @@
 <template>
-    <!-- <TopBar/> -->
     <main>
-        <div class="menu-bar">
-            <p class="font-semibold place-self-center">Categories</p>
-            <ul class="flex flex-row sm:flex-col">
-                <li class="rounded-sm hover:bg-gray-500 py-2 px-3" v-for="item in categories">
-                    <a href="">{{ item }}</a>
-                </li>
-            </ul>
-        </div>
-        <section>
-            <router-view></router-view>
-        </section>
+        <head-bar></head-bar>
+        <router-view></router-view>
     </main>
-    <Footer/>
 </template>
 <script setup>
 import { useHead } from '@vueuse/head'
-
-const categories = [
-    "React", "Vue", "Vanilla JS"
-]
 
 useHead({
     // Can be static or computed
@@ -53,7 +38,7 @@ useHead({
 }
 
 html:not(.dark) {
-    --prism-font-size: .9rem;
+    --prism-font-size: .8rem;
     --prism-line-height: 1.3em;
     --prism-foreground: #393a34;
     --prism-background: #fbfbfb;
@@ -73,55 +58,55 @@ html:not(.dark) {
 }
 
 main {
-    @apply flex sm:flex-row flex-col justify-start h-5/6; font-family: 'Inter', sans-serif;
-}
-main > .menu-bar {
-    @apply sticky left-0 top-0  px-4 py-2 bg-black bg-opacity-90 shadow-2xl text-white rounded-sm flex flex-row sm:flex-col justify-between
-}
-main > section {
-    @apply w-full
-}
-main > section > .markdown-body {
-    @apply max-w-screen-lg mx-auto px-10
+    /* @apply flex flex-col justify-start h-5/6; font-family: 'Inter', sans-serif; */
 }
 
-main > section > .markdown-body > h1, h2, h3 {
+main {
+    @apply w-full  h-5/6 overflow-auto text-sm sm:text-base;
+}
+main > .markdown-body {
+    @apply max-w-screen-lg mx-auto
+}
+main > .markdown-body > :not(pre) {
+    @apply px-8
+}
+
+main > .markdown-body > h1, h2, h3 {
     font-family: 'Lato', 'Inter', sans-serif;
 }
 
-main > section > .markdown-body > blockquote {
+main > .markdown-body > blockquote {
     @apply bg-gray-300 p-4 border-green-700 border-l-8 my-4 flex-shrink italic
 }
 
-main > section > .markdown-body > p {
+main > .markdown-body > p {
     @apply mb-4
 }
 
-main > section > .markdown-body a {
+main > .markdown-body a {
     @apply border-gray-800 border-b hover:bg-gray-400 hover:bg-opacity-40
 }
 
-main > section > .markdown-body > pre {
-    @apply my-6
+main > .markdown-body > pre {
+    @apply my-6 w-full
 }
-main > section > .markdown-body > ul {
+main > .markdown-body > ul {
     @apply list-inside list-disc
 }
-main > section > .markdown-body > ol {
+main > .markdown-body > ol {
     @apply list-inside list-decimal
 }
-:is(h1, h1, h3, p) code {
-    color: var(--prism-builtin);
-    font-style: italic;
-    @apply bg-gray-300 p-1 rounded-md font-medium
+:is(h1, h1, h3, p, li) code {
+    color: var(--prism-property);
+    @apply bg-gray-300 bg-opacity-70 px-1
 }
-main > section > .markdown-body > h1 {
-    @apply font-extrabold text-4xl mb-6 mt-2
+main > .markdown-body > h1 {
+    @apply font-extrabold text-2xl sm:text-4xl mb-6 mt-2
 }
-main > section > .markdown-body > h2 {
-    @apply font-extrabold text-2xl mb-5 mt-2
+main > .markdown-body > h2 {
+    @apply font-extrabold text-lg sm:text-2xl mb-5 mt-2
 }
-main > section > .markdown-body > h3 {
-    @apply font-bold text-2xl mb-5 mt-2
+main > .markdown-body > h3 {
+    @apply font-bold  text-lg sm:text-2xl mb-5 mt-2
 }
 </style>

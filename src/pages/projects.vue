@@ -123,7 +123,6 @@
             </div>
         </div>
     </section>
-    <Footer/>
 </template>
 <script setup>
 import { useHead } from '@vueuse/head'
@@ -134,7 +133,7 @@ useHead({
     meta: [
         {
             name: `description`,
-            content: "In this page are all my projects what I have built with differents techinlogies, check it out!",
+            content: "In this page are all my projects what I have built with differents technologies, check it out!",
         },
     ],
 })
@@ -166,7 +165,7 @@ section#content > .cards > .card > .data-tech {
     @apply bg-gray-300 p-4 border-green-700 border-l-8 my-4 flex-shrink
 }
 section#content > .cards > .card > .cover-img {
-    @apply m-auto max-w-sm flex-shrink
+    @apply m-auto sm:max-w-sm
 }
 section#content > .cards > .card > .description {
     @apply text-xs font-normal pt-3 flex-shrink

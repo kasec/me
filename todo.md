@@ -36,3 +36,9 @@
 
 # Repo config
 - Before push changes create a tag about this stable version.
+
+
+- [DONE] Add proper styles in blog.
+- [DONE] Blog buttons have to works.
+- Fix projects when you are in mobile device.
+- Fix blog for mobile device.

@@ -1,10 +1,8 @@
 <template>
     <nav>
-        <!-- <router-link class="home-button" to="/"> -->
         <a class="home-button" href="/">
             <img class="logo-image" src="/assets/images/logo/logo.svg" alt="home">
         </a>
-        <!-- </router-link> -->
         <div class="button-stack">
             <router-link v-for="button in router_buttons" :class="button.class" :to="button.to">{{button.title}}</router-link> 
         </div>
@@ -60,7 +58,7 @@ nav > .home-button > img.logo-image {
     @apply h-16 rounded-full flex-shrink-0 hover:bg-green-800 p-1
 }
 nav > .button-stack {
-    @apply text-white flex text-sm sm:text-base font-semibold justify-evenly items-center
+    @apply text-white flex text-base font-semibold justify-evenly items-center
 }
 nav > .button-stack > .link-button {
     @apply py-3 px-3 flex items-center justify-center hover:bg-black hover:text-white hover:bg-opacity-50

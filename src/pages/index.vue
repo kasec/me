@@ -1,9 +1,7 @@
 <template>
-    <!-- <TopBar/> -->
-    <section>
-        <post-container></post-container>
-    </section>
-    <Footer/>
+    <main>
+        <post-container :categories="['blog', 'thoughts']"></post-container>
+    </main>
 </template>
 <script setup>
 import { useHead } from '@vueuse/head'
@@ -20,23 +18,8 @@ import { useHead } from '@vueuse/head'
     })
 
 </script>
-<style lang="postcss">
-section {
-    @apply pt-10 overflow-auto
-}
-section > .posts-container {
-    @apply  flex flex-col items-center min-w-full
-}
-section > .posts-container > .top {
-    @apply flex flex-row items-center space-x-8
-}
-section > .posts-container > .top > .button {
-    @apply bg-black text-white font-semibold rounded-lg p-2 hover:bg-green-900 border-4 hover:border-white
-}
-section > .posts-container > .post-list > .post-item {
-    @apply p-3
-}
-section > .posts-container > .post-list > .post-item > article {
-    @apply cursor-pointer border-t border-gray-400 p-4 hover:bg-white hover:shadow-lg hover:border-transparent
+<style lang="postcss" scoped>
+main {
+    @apply w-full h-5/6 overflow-auto;
 }
 </style>

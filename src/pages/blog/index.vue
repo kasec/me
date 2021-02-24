@@ -1,3 +1,3 @@
 <template>
-  <post-container></post-container>
+    <post-container></post-container>
 </template>
