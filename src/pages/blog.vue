@@ -58,10 +58,6 @@ html:not(.dark) {
 }
 
 main {
-    /* @apply flex flex-col justify-start h-5/6; font-family: 'Inter', sans-serif; */
-}
-
-main {
     @apply w-full  h-5/6 overflow-auto text-sm sm:text-base;
 }
 main > .markdown-body {
@@ -75,7 +71,7 @@ main > .markdown-body > h1, h2, h3 {
     font-family: 'Lato', 'Inter', sans-serif;
 }
 
-main > .markdown-body > blockquote {
+main > .markdown-body blockquote {
     @apply bg-gray-300 p-4 border-green-700 border-l-8 my-4 flex-shrink italic
 }
 
@@ -90,23 +86,79 @@ main > .markdown-body a {
 main > .markdown-body > pre {
     @apply my-6 w-full
 }
-main > .markdown-body > ul {
+main > .markdown-body details {
+    @apply px-0 sm:px-8
+}
+main > .markdown-body details > summary {
+    @apply cursor-pointer my-1 py-1 outline-none
+}
+em {
+    position: relative;
+    z-index: 0;
+    @apply font-medium
+}
+em::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 13px;
+    width: 100%;
+    height: 30%;
+    z-index: -1;
+    @apply bg-gray-400;
+}
+
+strong {
+    position: relative;
+    z-index: 0;
+}
+strong::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 13px;
+    width: 100%;
+    height: 30%;
+    z-index: -1;
+    @apply bg-green-600;
+}
+
+main > .markdown-body details > div {
+    @apply border-t-2 border-gray-600 rounded bg-gray-300 bg-opacity-50 py-4 px-2 sm:px-5 shadow
+}
+
+main > .markdown-body ul {
     @apply list-inside list-disc
 }
-main > .markdown-body > ol {
+main > .markdown-body ol {
     @apply list-inside list-decimal
 }
-:is(h1, h1, h3, p, li) code {
-    color: var(--prism-property);
-    @apply bg-gray-300 bg-opacity-70 px-1
+
+main > .markdown-body li {
+    @apply my-2
 }
-main > .markdown-body > h1 {
-    @apply font-extrabold text-2xl sm:text-4xl mb-6 mt-2
+
+main > .markdown-body li > *:first-child {
+    @apply inline-block
 }
-main > .markdown-body > h2 {
-    @apply font-extrabold text-lg sm:text-2xl mb-5 mt-2
+
+:is(h1, h2, h3, h4, p, li, summary) > code {
+    color: var(--prism-keyword);
+    @apply my-1 px-1 border border-gray-600 rounded-sm
 }
-main > .markdown-body > h3 {
-    @apply font-bold  text-lg sm:text-2xl mb-5 mt-2
+pre > code {
+    @apply bg-transparent
+}
+main > .markdown-body h1 {
+    @apply font-semibold text-2xl sm:text-4xl mb-6 mt-8
+}
+main > .markdown-body h2 {
+    @apply font-semibold text-lg sm:text-2xl mb-5 mt-5
+}
+main > .markdown-body h3 {
+    @apply font-semibold  text-lg sm:text-2xl mb-5 mt-10
+}
+main > .markdown-body h4 {
+    @apply font-medium  text-lg sm:text-xl mb-5 mt-10
 }
 </style>

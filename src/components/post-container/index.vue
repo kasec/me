@@ -41,7 +41,7 @@
 
 <script setup>
 
-import { defineProps, ref, onMounted } from 'vue'
+import { defineProps, ref } from 'vue'
 import postManifest from '../../content.json'
 import { handleModules } from '../../utils/handle-modules'
 

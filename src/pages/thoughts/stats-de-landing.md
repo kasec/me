@@ -89,3 +89,6 @@ Mi pensamiento es el siguiente, si hay n-cantidad de vistas que tienen la misma 
 ## Overview
 
 Me di la tarea de ver como funcionaba el network de devtools del navegador, no habia percatado bien. En efecto el navegador cachea los archivos que encuentra repetitivos, asi que no nesesariamente importa si es html o lo renderea com script. en este caso si dependeria mas de la herramienta de bundleo que haga code splitting a los archivos que tengan la misma relacion sobre un archivo en especifico. 
+
+
+Actualmente con los nuevos cambios de la version 1.2, hubo una cuestion. la primera vez que cargas la vista aparece una flashaso, el cual pareciera que lo hace porque los estilos los ingresa con js, eso es lo que justamente me parece raro, supuestamente los estilos estan ahi pero no los carga del inicio, o al parecer se tarda un poco en cargarlos, nose si es un comportamiento, voy a ver el ejemplo de vitesse, una pagina que esta en produccion usando la misma libreria haber si le sucede lo mismo.

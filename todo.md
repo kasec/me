@@ -35,10 +35,24 @@
 - Update every place example ig and fb, twitter, linkeding to new website. 
 
 # Repo config
-- Before push changes create a tag about this stable version.
+- [DONE] Before push changes create a tag about this stable version.
 
 
 - [DONE] Add proper styles in blog.
 - [DONE] Blog buttons have to works.
-- Fix projects when you are in mobile device.
-- Fix blog for mobile device.
+- [DONE] Fix projects when you are in mobile device.
+- [DONE] Fix blog for mobile device.
+
+
+- [DONE] Finish the blog
+- [DONE] Clean vite-vanilla-js post, continue with the following post.
+- [STANDBY] Fix the blog styles.
+  - styles in paragrahph in summary and titles, divider as well see . 3 in vite-vanilla-js Add files... sumarry
+  - add left pd form summarry in mobile.
+
+- reset button in categories.
+- Check order in blog posts.
+  - Add parser to get yaml values from md file and set in post lists and dont use json content.
+  - Add meta data in yaml in markdown file and create a plugin to get this values from every md file and with it create a virtual json with the following properties.
+- post lists cards edit styles in date, remove bg color and add border instead.
+- Add when the scroll ho to bottom open footer wrap and close when is not there.

@@ -1,5 +1,10 @@
 {
     "blog": {
+        "vite-vanilla-js": {
+            "title": "Vite Setup with Vanilla JS(fix in the end)",
+            "description": "I will create a vite setup first with vanilla js, after that I will build React, tailwind configuration from scratch.",
+            "date": "2020-03-04"
+        },
         "bienvenidos": {
             "title": "Bienvenidos",
             "description": "Como es el primer post, doy una descripcion de que hago, cual es mi objetivo al crear contenido, asi como otras cosas mas.",
