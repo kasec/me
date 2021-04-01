@@ -35,30 +35,39 @@
     "/assets/about-me.d811e936.css"
   ],
   "/home/galfan/Documents/web-dev/me/src/components/head-bar.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/blog.4f0d4cfa.js",
-    "/assets/blog.02a22ffd.css"
+    "/assets/blog.80a2c51c.js",
+    "/assets/blog.b250a020.css"
   ],
   "/home/galfan/Documents/web-dev/me/src/components/head-bar.vue?vue&type=style&index=0&scoped=true&lang.css": [
-    "/assets/blog.4f0d4cfa.js",
-    "/assets/blog.02a22ffd.css"
+    "/assets/blog.80a2c51c.js",
+    "/assets/blog.b250a020.css"
   ],
   "/home/galfan/Documents/web-dev/me/src/components/head-bar.vue": [
-    "/assets/blog.4f0d4cfa.js",
-    "/assets/blog.02a22ffd.css"
+    "/assets/blog.80a2c51c.js",
+    "/assets/blog.b250a020.css"
   ],
   "/home/galfan/Documents/web-dev/me/src/pages/blog.vue?vue&type=style&index=0&lang.postcss": [
-    "/assets/blog.4f0d4cfa.js",
-    "/assets/blog.02a22ffd.css"
+    "/assets/blog.80a2c51c.js",
+    "/assets/blog.b250a020.css"
   ],
   "/home/galfan/Documents/web-dev/me/src/pages/blog.vue": [
-    "/assets/blog.4f0d4cfa.js",
-    "/assets/blog.02a22ffd.css"
+    "/assets/blog.80a2c51c.js",
+    "/assets/blog.b250a020.css"
   ],
   "/home/galfan/Documents/web-dev/me/src/pages/blog/index.vue": [
-    "/assets/index.106f1acc.js"
+    "/assets/index.b4be4490.js"
   ],
   "/home/galfan/Documents/web-dev/me/src/pages/blog/spanish/bienvenidos.md": [
     "/assets/bienvenidos.7cdcaf00.js"
+  ],
+  "/home/galfan/Documents/web-dev/me/assets/images/vite-vanilla-js/js-doc-implementation.png": [
+    "/assets/vite-vanilla-js.e0d9c73a.js"
+  ],
+  "/home/galfan/Documents/web-dev/me/assets/images/vite-vanilla-js/type-module.gif": [
+    "/assets/vite-vanilla-js.e0d9c73a.js"
+  ],
+  "/home/galfan/Documents/web-dev/me/src/pages/blog/english/react/vite-vanilla-js.md": [
+    "/assets/vite-vanilla-js.e0d9c73a.js"
   ],
   "/home/galfan/Documents/web-dev/me/src/pages/blog/spanish/react/como-funciona-react.md": [
     "/assets/como-funciona-react.63aa14f3.js"
@@ -104,7 +113,7 @@
     "/assets/projects.c2a886a4.css"
   ],
   "/home/galfan/Documents/web-dev/me/src/pages/thoughts/stats-de-landing.md": [
-    "/assets/stats-de-landing.7d709fbc.js"
+    "/assets/stats-de-landing.2e41424c.js"
   ],
   "/home/galfan/Documents/web-dev/me/src/pages/thoughts/web/partial-hydration.md": [
     "/assets/partial-hydration.dbc46059.js"
