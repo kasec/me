@@ -95,15 +95,16 @@ main > .markdown-body details > summary {
 em {
     position: relative;
     z-index: 0;
-    @apply font-medium
+    @apply font-medium;
+    display: inline-block;
 }
 em::after {
     content: "";
     position: absolute;
     left: 0;
-    top: 13px;
+    top: 12px;
     width: 100%;
-    height: 30%;
+    height: 20%;
     z-index: -1;
     @apply bg-gray-400;
 }
@@ -111,6 +112,7 @@ em::after {
 strong {
     position: relative;
     z-index: 0;
+    display: inline-block;
 }
 strong::after {
     content: "";
@@ -118,7 +120,7 @@ strong::after {
     left: 0;
     top: 13px;
     width: 100%;
-    height: 30%;
+    height: 15%;
     z-index: -1;
     @apply bg-green-600;
 }

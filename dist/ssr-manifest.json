@@ -35,27 +35,30 @@
     "/assets/about-me.d811e936.css"
   ],
   "/home/galfan/Documents/web-dev/me/src/components/head-bar.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/blog.80a2c51c.js",
-    "/assets/blog.b250a020.css"
+    "/assets/blog.8f37f5a8.js",
+    "/assets/blog.95244e38.css"
   ],
   "/home/galfan/Documents/web-dev/me/src/components/head-bar.vue?vue&type=style&index=0&scoped=true&lang.css": [
-    "/assets/blog.80a2c51c.js",
-    "/assets/blog.b250a020.css"
+    "/assets/blog.8f37f5a8.js",
+    "/assets/blog.95244e38.css"
   ],
   "/home/galfan/Documents/web-dev/me/src/components/head-bar.vue": [
-    "/assets/blog.80a2c51c.js",
-    "/assets/blog.b250a020.css"
+    "/assets/blog.8f37f5a8.js",
+    "/assets/blog.95244e38.css"
   ],
   "/home/galfan/Documents/web-dev/me/src/pages/blog.vue?vue&type=style&index=0&lang.postcss": [
-    "/assets/blog.80a2c51c.js",
-    "/assets/blog.b250a020.css"
+    "/assets/blog.8f37f5a8.js",
+    "/assets/blog.95244e38.css"
   ],
   "/home/galfan/Documents/web-dev/me/src/pages/blog.vue": [
-    "/assets/blog.80a2c51c.js",
-    "/assets/blog.b250a020.css"
+    "/assets/blog.8f37f5a8.js",
+    "/assets/blog.95244e38.css"
   ],
   "/home/galfan/Documents/web-dev/me/src/pages/blog/index.vue": [
-    "/assets/index.b4be4490.js"
+    "/assets/index.51356dad.js"
+  ],
+  "/home/galfan/Documents/web-dev/me/src/pages/blog/english/need-a-bundle.md": [
+    "/assets/need-a-bundle.a826aa4a.js"
   ],
   "/home/galfan/Documents/web-dev/me/src/pages/blog/spanish/bienvenidos.md": [
     "/assets/bienvenidos.7cdcaf00.js"

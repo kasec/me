@@ -50,6 +50,7 @@
   - styles in paragrahph in summary and titles, divider as well see . 3 in vite-vanilla-js Add files... sumarry
   - add left pd form summarry in mobile.
 
+- [DONE] Fix overlap from after pseudoelement. i had to change display property in element to inline-block
 - reset button in categories.
 - Check order in blog posts.
   - Add parser to get yaml values from md file and set in post lists and dont use json content.

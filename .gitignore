@@ -1,7 +1,8 @@
 /node_modules
 /output
-# /dist
-# need to uncomment to create commit in dist folder and after that upload to gh-pages branch.
+/dist
+# need to comment to create commit in dist folder and after that upload to gh-pages branch.
 # git subtree push --prefix dist origin gh-pages
+# and uncomment link to spitbee or adssence if t is needed
 # 244
 # 834
